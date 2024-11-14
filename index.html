@@ -8,8 +8,11 @@
     <link id="themeStyle" rel="stylesheet" href="assets/css/light.css">
     <link rel="stylesheet" href="assets/Font Awesome/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/renner" rel="stylesheet">
+    <link rel="stylesheet" href="assets/OwlCarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/OwlCarousel/assets/owl.theme.default.min.css">
+
     
 </head>
 <body>
@@ -22,11 +25,23 @@
         <div class="top-bar">
             <img src="assets/img/core-img/logo.png" alt="Company logo" width="120" height="40" class="logo">
             <nav>
-                <a href="#">Home</a>
-                <a href="#">Album</a>
-                <a href="#">Blog</a>
-                <a href="#">Events</a>
-                <a href="#">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="album.html">Album</a>
+                <a href="blog.html">Blog</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            
+            <!-- Add this right after the nav element in the top-bar -->
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="mobile-nav">
+                <a href="index.html">Home</a>
+                <a href="album.html">Album</a>
+                <a href="blog.html">Blog</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
             </nav>
             
             <a href="#" class="cart">
@@ -52,7 +67,7 @@
                 I'm thrilled to share with you the newest tracks from my album,
                 <br> each one a reflection of my experiences, emotions, and creativity.</p>
         </div>
-        <div class="about_third" id="about_third">
+        <div class="owlcarousel" id="about_third">
                 <div class="about_box"><img src="assets/img/bg-img/a1.jpg"><p style="font-weight: bold;">TAKE ME AWAY</p>ft. Defiant</div>
                 <div class="about_box"><img src="assets/img/bg-img/a2.jpg"><p style="font-weight: bold;">LOVE THOUGHTS</p></div>
                 <div class="about_box"><img src="assets/img/bg-img/a3.jpg"><p style="font-weight: bold;">LOVE THOUGHTS</p></div>
@@ -65,7 +80,14 @@
     </section>
     <section id="hit">
         <div class="jam"> 
-            <div class="hit_first"><img src="assets/img/bg-img/a1.jpg"></div>
+            <div class="hit_first">
+                <img src="assets/img/bg-img/a1.jpg">
+                <div class="aud">
+                    <audio controls>
+                        <source src="assets/audio/audio1.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
             <div class="hit_second">
                 <p class="see">See what's new</p>
                 <h2>BUY WHAT'S NEW</h2>
@@ -73,57 +95,53 @@
                     This enchanting love song invites listeners into an intimate moment where the world fades away, leaving only the soft, melodic promises of affection and devotion.</p>
                 <div class="song">
                     <p>01. Main Hit Song</p>
-                    <audio controls>
-                        <source src="assets/audio/audio1.mp3" type="audio/mp3">
-                    </audio>
+                    <button class="buy">Buy Album<i class="fa-solid fa-basket-shopping"></i></button>
+                    
                 </div>
             </div>
         </div>
        
     </section>
-    <section id="contact">
-        <div class="container">
-            <div class="header">
-                <p class="subtitle">See what's new</p>
-                <h1>Get In Touch</h1>
-            </div>
-            <form class="contact-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group full-width">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="4"></textarea>
-                    </div>
-                </div>
-                <div class="button-container">
-                    <button type="submit">
-                        Send <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-            </form>
+    <section id="sub">
+        <!-- Add the hearts container -->
+        <div class="floating-hearts">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
         </div>
+        <!-- Rest of your existing content -->
+        <div class="stay">
+            <h3>STAY</h3>
+            <h2>UPDATED</h2>
+        </div>
+        <div class="sign_box">
+            
+            <div class="signUp">
+            <h2>Sign Up For Our<br>Newsletter</h2>
+            <p>Stay up to date on exciting<br>projects and upcoming events<br>from C.O.L.D Records with love.</p>
+            </div>
+
+            <div class="signed">
+                <form action="submit_page.php" method="post">
+                    <input type="email" placeholder="Your Email">
+                    <button class="signedUp">Sign Up</button>
+                </form>
+            </div>
+
+        </div>       
     </section>
     
-   
-    </div>
+       </div>
     <footer class="footer-area">
         <div class="container">
             <d class="d-flex">
                 <div class="col-12 col-md-6">
-                    <a href="#"><img src="assets/img/core-img/logo.png" alt=""></a>
+                    <a href="#"><img src="assets/img/core-img/logo.png" alt="" width="120" height="40"></a>
                     <p class="copywrite-text">
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | C.O.L.D. The Raptor</p>
                 </div>
@@ -140,10 +158,19 @@
                 
             </div>
         </div>
-        
-        
-    </footer>
+                  <button onclick="topFunction()" id="scrollToTop" class="scroll-top">
+                      <i class="fas fa-arrow-up"></i>
+                  </button>
+              </footer>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/OwlCarousel/owl.carousel.min.js"></script>          
     <script src="assets/js/main.js"></script>
+<script>
+    
+</script>
 </body>
 </html>
+
+
+
 
