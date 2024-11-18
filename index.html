@@ -8,8 +8,9 @@
     <link id="themeStyle" rel="stylesheet" href="assets/css/light.css">
     <link rel="stylesheet" href="assets/Font Awesome/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/renner" rel="stylesheet">
+
     
 </head>
 <body>
@@ -17,24 +18,26 @@
             <div class="carousel-slide slide1"></div>
             <div class="carousel-slide slide2"></div>
             <!-- Rest of the header content -->
-        
-        <!-- Top Bar -->
-        <div class="top-bar">
-            <img src="assets/img/core-img/logo.png" alt="Company logo" width="120" height="40" class="logo">
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Album</a>
-                <a href="#">Blog</a>
-                <a href="#">Events</a>
-                <a href="#">Contact</a>
-            </nav>
-            
-            <a href="#" class="cart">
-                <span>Log In/Register</span>
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-        </div>
-
+                  <!-- Top Bar -->
+                  <div class="top-bar">
+                      <img src="assets/img/core-img/logo.png" alt="Company logo" width="120" height="40" class="logo">
+                      <div class="mobile-nav-toggle" id="mobileNavToggle">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                      </div>
+                      <nav class="main-nav" id="mainNav">
+                          <a href="index.html">Home</a>
+                          <a href="album.html">Album</a>
+                          <a href="blog.html">Blog</a>
+                          <a href="events.html">Events</a>
+                          <a href="contact.html">Contact</a>
+                      </nav>
+                      <a href="#" class="cart">
+                          <span>Log In/Register</span>
+                          <i class="fa-solid fa-cart-shopping"></i>
+                      </a>
+                  </div>
         <!-- Other Header Contents -->
         <div class="header-content">
             <p class="subtitle">LATEST ALBUM</p>
@@ -65,7 +68,14 @@
     </section>
     <section id="hit">
         <div class="jam"> 
-            <div class="hit_first"><img src="assets/img/bg-img/a1.jpg"></div>
+            <div class="hit_first">
+                <img src="assets/img/bg-img/a1.jpg">
+                <div class="aud">
+                    <audio controls>
+                        <source src="assets/audio/audio1.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
             <div class="hit_second">
                 <p class="see">See what's new</p>
                 <h2>BUY WHAT'S NEW</h2>
@@ -73,77 +83,110 @@
                     This enchanting love song invites listeners into an intimate moment where the world fades away, leaving only the soft, melodic promises of affection and devotion.</p>
                 <div class="song">
                     <p>01. Main Hit Song</p>
-                    <audio controls>
-                        <source src="assets/audio/audio1.mp3" type="audio/mp3">
-                    </audio>
+                    <button class="buy">Buy Album<i class="fa-solid fa-basket-shopping"></i></button>
+                    
                 </div>
             </div>
         </div>
        
     </section>
-    <section id="contact">
-        <div class="container">
-            <div class="header">
-                <p class="subtitle">See what's new</p>
-                <h1>Get In Touch</h1>
+    <section id="sub">
+        <!-- Add the hearts container -->
+        <div class="floating-hearts">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+        <!-- Rest of your existing content -->
+        <div class="stay">
+            <h3>STAY</h3>
+            <h2>UPDATED</h2>
+        </div>
+        <div class="sign_box">
+            
+            <div class="signUp">
+            <h2>Sign Up For Our<br>Newsletter</h2>
+            <p>Stay up to date on exciting<br>projects and upcoming events<br>from C.O.L.D Records with love.</p>
             </div>
-            <form class="contact-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject">
-                    </div>
+
+            <div class="signed">
+                <form action="submit_page.php" method="post">
+                    <input type="email" placeholder="Your Email">
+                    <button class="signedUp">Sign Up</button>
+                </form>
+            </div>
+
+        </div>       
+    </section>
+    
+    <section id="countdown">
+        <div class="countdown-container">
+            <h2>Next Big Event - DJ NIGHT PARTY</h2>
+            <p>December 26, 2024</p>
+            <div class="countdown-boxes">
+                <div class="countdown-box">
+                    <span id="days">00</span>
+                    <span class="label">Days</span>
                 </div>
-                <div class="form-row">
-                    <div class="form-group full-width">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="4"></textarea>
-                    </div>
+                <div class="countdown-box">
+                    <span id="hours">00</span>
+                    <span class="label">Hours</span>
                 </div>
-                <div class="button-container">
-                    <button type="submit">
-                        Send <i class="fas fa-arrow-right"></i>
-                    </button>
+                <div class="countdown-box">
+                    <span id="minutes">00</span>
+                    <span class="label">Minutes</span>
                 </div>
-            </form>
+                <div class="countdown-box">
+                    <span id="seconds">00</span>
+                    <span class="label">Seconds</span>
+                </div>
+            </div>
         </div>
     </section>
     
-   
-    </div>
+
     <footer class="footer-area">
         <div class="container">
             <d class="d-flex">
                 <div class="col-12 col-md-6">
-                    <a href="#"><img src="assets/img/core-img/logo.png" alt=""></a>
+                    <a href="#"><img src="assets/img/core-img/logo.png" alt="Company Logo" width="120" height="40"></a>
                     <p class="copywrite-text">
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | C.O.L.D. The Raptor</p>
                 </div>
 
                 <div class="footer-nav">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Albums</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="album.html">Albums</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                 </div>
                 
             </div>
         </div>
-        
-        
-    </footer>
+                  <button onclick="topFunction()" id="scrollToTop" class="scroll-top">
+                      <i class="fas fa-arrow-up"></i>
+                  </button>
+              </footer>
     <script src="assets/js/main.js"></script>
+    <script>
+        // Initialize countdown immediately when DOM loads
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        });
+    </script>
+    
 </body>
 </html>
+
+
+
 
